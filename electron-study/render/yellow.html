@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<a id="ahref" href="https://gitee.com/grh-gitee">gitee</a>
+	<button id="mybtn" href="https://github.com/">btn222</button>
+	<div id="mytext"></div><!-- 显示组件传递过来的数据 -->
+	<button id=="openBtn">打开窗口</button>
+	<script src="./util/index.js"></script>
+	<script>
+		const { dialog } = require('electron').remote
+		let openBtn = document.getElementById('openBtn')
+		openBtn.onclick = function () {
+			dialog.showOpenDialog({
+				title: '选择您喜欢的图片'
+			})
+		}
+	</script>
+</body>
+
+</html>

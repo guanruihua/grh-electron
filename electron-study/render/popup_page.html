@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+</head>
+
+<body>
+	<h2>弹出的子窗口</h2>
+	<button id='popbtn'>向父窗口传递信息</button>
+	<script>
+		let popbtn = this.document.querySelector('#popbtn');
+		popbtn.onclick = function (e) {
+			// alert(12312);
+			window.opener.postMessage('我是子窗口的数据')
+		}
+	</script>
+</body>
+
+</html>
